@@ -5,8 +5,12 @@ plugins:
   # Base Protobuf types for TS
   - remote: buf.build/bufbuild/es:v1.10.0
     out: codegen/ts
-    opt: target=ts
+    opt:
+    - target=ts
+    - import_extension=none # Better for bundlers
   # Connect RPC (gRPC-compatible) for TS
   - remote: buf.build/connectrpc/es:v1.4.0
     out: codegen/ts
-    opt: target=ts
+    opt:
+    - target=ts
+    - import_extension=none
