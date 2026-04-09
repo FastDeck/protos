@@ -1,0 +1,12 @@
+version: v2
+managed:
+  enabled: true
+plugins:
+  # Base Protobuf types for TS
+  - remote: buf.build/bufbuild/es:v1.10.0
+    out: codegen/ts
+    opt: target=ts
+  # Connect RPC (gRPC-compatible) for TS
+  - remote: buf.build/connectrpc/es:v1.4.0
+    out: codegen/ts
+    opt: target=ts

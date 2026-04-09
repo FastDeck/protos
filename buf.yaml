@@ -1,0 +1,15 @@
+version: v2
+modules:
+  - path: proto
+lint:
+  use:
+    - STANDARD
+    - PACKAGE_DIRECTORY_MATCH
+    - FILE_LOWER_SNAKE_CASE
+  except:
+    - PACKAGE_VERSION_SUFFIX
+  ignore:
+        - proto/google
+breaking:
+  use:
+    - FILE
